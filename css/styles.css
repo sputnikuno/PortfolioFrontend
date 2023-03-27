@@ -1,0 +1,102 @@
+/* ****Custom Properties***** */
+:root {
+    --first-color:font-weight:;
+    --first-alpha-color: rgba(208, 64, 40, 0.75);
+    --second-color: rgba(89, 177, 119, 1);
+    --second-alpha-color:  rgba(89, 177, 119, 0.75);
+    --third-color: rgba(50, 90, 54, 1);
+    --third-alpha-color: rgba(50, 90, 54, 0.75);
+
+    --link-color: rgba(18, 19, 12, 1);
+
+    --bg-color: rgba(225, 200, 148, 0.75);
+}
+
+/* ***** Reset Styles ***** */ 
+* {
+    list-style:none;
+}
+body {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    color:  rgba(208, 64, 40, 0.75);
+    font-weight: bold;
+}
+
+h2, h4 {
+    font-weight: 200;
+    color: rgba(50, 90, 54, 1)
+}
+
+footer {
+    padding-bottom: 10px;
+}
+
+
+/* ***** Bootstrap Styles **** */
+
+.navbar-brand-1, .navbar-brand-2, .navbar-brand-3  img {
+    width: auto;
+    height: 30px;
+}
+.btn-outline-success {
+    --bs-btn-color: rgba(208, 64, 40, 1);
+    --bs-btn-border-color: rgba(208, 64, 40, 1);
+    --bs-btn-hover-bg: rgba(89, 177, 119, 1);
+    --bs-btn-hover-border-color: rgba(208, 64, 40, 1);
+    font-weight: bold;
+}
+
+.bg-dark {
+    background-color: var(--first-alpha-color) !important;
+}
+
+#iconos svg{
+    color: white;
+}
+
+
+
+/*#contact-button {
+    dis
+    position: relative;
+    bottom:150px;
+    right: 5px;
+}
+
+#background-banner {
+
+    display:inline-block;
+}
+*/
+
+
+
+
+
+/* **** My Styles **** */
+/* X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
