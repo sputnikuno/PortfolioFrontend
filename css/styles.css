@@ -1,6 +1,6 @@
 /* ****Custom Properties***** */
 :root {
-    --first-color:font-weight:;
+    --first-color: rgba(208, 64, 40, 0.75);
     --first-alpha-color: rgba(208, 64, 40, 0.75);
     --second-color: rgba(89, 177, 119, 1);
     --second-alpha-color:  rgba(89, 177, 119, 0.75);
@@ -57,6 +57,11 @@ footer {
 #iconos svg{
     color: white;
 }
+
+.bg-info {
+    background-color: rgba(225, 200, 148, 0.75)!important;
+}
+
 
 
 
