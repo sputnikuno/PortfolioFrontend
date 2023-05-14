@@ -4,51 +4,20 @@
         <h1>Proyectos</h1>
       </div>
       <div class="col-8">
-        <button type="button" class="btn btn-outline-secondary te">Modificar</button>
+        <button type="button" class="btn btn-outline-secondary te" *ngIf="isLogged">Modificar</button>
       </div>
     </div>
       
-    <div class="row">
       <ul>
-        <div>
-          <h4>Fotografía</h4>
-            <p class="fs-7">Lorem Ipsum is simply dummy text 
-            of the printing and typesetting industry. Lorem Ipsum 
-            has been the industry's standard dummy text ever since 
-            the 1500s, when an unknown printer took a galley of type 
-            and scrambled it to make a type specimen book. </p>
-        </div>
-        <div>
-          <img src="assets/grafico-skills.png" class="img-thumbnail">
-        </div>
+        <li class="row" *ngFor="let proyectos of proyectosList">
+          <div>
+            <h4>{{proyectos.name}}</h4>
+          </div>
+          <p class="fs-7">{{proyectos.text}}</p>
+          <div>
+            <img [src]="proyectos.image" class="img-thumbnail"/>
+          </div>
+      </li>
       </ul>
 
-      <ul>
-        <div>
-          <h4>Ilustraciones</h4>
-            <p class="fs-7">Lorem Ipsum is simply dummy text 
-            of the printing and typesetting industry. Lorem Ipsum 
-            has been the industry's standard dummy text ever since 
-            the 1500s, when an unknown printer took a galley of type 
-            and scrambled it to make a type specimen book. </p>
-        </div>
-        <div>
-          <img src="assets/grafico-skills.png" class="img-thumbnail">
-        </div>
-      </ul>
-
-      <ul>
-        <div>
-          <h4>Realización audiovisual</h4>
-            <p class="fs-7">Lorem Ipsum is simply dummy text 
-            of the printing and typesetting industry. Lorem Ipsum 
-            has been the industry's standard dummy text ever since 
-            the 1500s, when an unknown printer took a galley of type 
-            and scrambled it to make a type specimen book. </p>
-        </div>
-        <div>
-          <img src="assets/grafico-skills.png" class="img-thumbnail">
-        </div>
-      </ul>
-    </div>
   </div>

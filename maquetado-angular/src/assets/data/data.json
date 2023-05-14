@@ -1,0 +1,79 @@
+{ 
+        "name": "Georgina Larentti",
+        "image": "assets/foto.png",
+        "text": "Lorem Ipsum",
+
+    "education": [{
+            "school": "Universidad Nacional de Misiones",
+            "title": "Técnico en Medios Audiovisuales y Fotografía",
+            "start": "2019",
+            "end": "2023"
+        },
+        {
+            "school": "Universidad Nacional de Misiones",
+            "title": "Diseño Gráfico",
+            "start": "2021",
+            "end": "2022"
+        }
+    ],
+    "expertise": [{
+            "empresa": "Los Aromos Colectivo Cultural",
+            "title":"Realizador Audiovisual",
+            "start": "2022",
+            "end": "Actualmente"
+        },
+        { 
+            "empresa": "Oberá en Cortos",
+            "title": "Asistencia de Producción",
+            "start": "2022",
+            "end": ""
+        }
+    ],
+    "aptitudes": [{
+            "name": "",
+            "puesto": "",
+            "progress": ""
+        },
+        {
+            "name": "",
+            "puesto": "",
+        "progress": ""
+        },
+        {
+            "name": "",
+            "puesto": "",
+            "progress": ""
+        },
+        {
+            "name": "",
+            "puesto": "",
+            "progress": ""
+        },
+        {
+            "name": "",
+            "puesto": "",
+            "progress": ""
+        },
+        {
+            "name": "",
+            "puesto": "",        
+            "progress": ""
+        }
+    ],
+    "projects": [{
+            "name": "Fotografía",
+            "text": "",
+            "image": ""
+        },
+        {
+            "name": "Ilustraciones",
+            "text": "",
+            "image": ""
+        },
+        {
+            "name": "Realización Audiovisual",
+            "text": "text",
+            "image": "assets/grafico-skills.png"
+        }
+    ]
+}
