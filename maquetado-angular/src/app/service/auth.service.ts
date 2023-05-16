@@ -4,12 +4,13 @@ import { LoginUsuario } from '../model/login-usuario';
 import { Observable } from 'rxjs';
 import { JwtDto } from '../model/jwt-dto';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = environment.apiURL + 'auth/';
 
   constructor(private httpCLient: HttpClient) { }
 

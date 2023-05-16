@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { persona } from '../model/persona.model';
+import { environment } from 'src/environments/environment';
 
 
 const TOKEN_KEY = 'AuthToken';
@@ -14,7 +15,7 @@ const AUTHORITIES_KEY = 'AuthAuthotities';
 
 export class PersonaService {
 
-  private url: string = 'http://localhost:8080/personas/traer/perfil';
+  private url: string = environment.apiURL + '/personas/traer/perfil';
 
   constructor(private http: HttpClient) { }
 
