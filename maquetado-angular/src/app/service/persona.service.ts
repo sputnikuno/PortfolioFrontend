@@ -15,13 +15,13 @@ const AUTHORITIES_KEY = 'AuthAuthotities';
 
 export class PersonaService {
 
-  private url: string = environment.apiURL + '/personas/traer/perfil';
+  private url: string = environment.apiURL + 'personas/traer/perfil';
 
   constructor(private http: HttpClient) { }
 
   getPersona(): Observable<persona> {
     const headers = new HttpHeaders({
-      'Authorization': 'Aguila99',
+      'Authorization': '',
       'Content-Type': 'application/json'
     });
     return this.http.get<persona>(this.url, { headers });

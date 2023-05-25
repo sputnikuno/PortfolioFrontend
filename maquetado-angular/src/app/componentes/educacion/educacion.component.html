@@ -1,4 +1,4 @@
-<div class="container pt-5">
+<div class="container" id="educacion">
     <div class="row justify-content-between mb-3">
      
       <div class="col-4"> 
@@ -11,14 +11,16 @@
     </div>
 
     <ul>
-      <li class="row" *ngFor="let educacion of educacionList">
-        <div class="col-4">
+      <li class="row p-3" *ngFor="let educacion of educacionList">
+        <div class="col-6 p-3">
           <h4>{{educacion.title}}</h4>
         </div>
-        <article class="col-8 fs-7">
-          <p> {{educacion.school}}</p>
+        <article class="col-6">
+          <p class="nombre-institucion"> {{educacion.school}}</p>
           <p> <time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>
+          <div class="linea"></div>
         </article>
       </li>
     </ul>
+
   </div>

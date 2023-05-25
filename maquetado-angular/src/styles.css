@@ -17,49 +17,82 @@
     list-style:none;
 }
 body {
-    font-family: 'Mukta', sans-serif;
-    font-weight: 400;
+    font-family: 'Mukta', sans-serif !important;
+    font-weight: 400 !important;
 }
 
 h1 {
-    color:  rgba(208, 64, 40, 0.75);
-    font-weight: bold;
+    color: var(--first-alpha-color);
+    font-weight: 600 !important;
 }
 
 h2, h4 {
-    font-weight: 200;
-    color: rgba(50, 90, 54, 1)
+    font-weight: 200 !important;
+    color: var(--first-color);
 }
 
 footer {
     padding-bottom: 10px;
+    background-color: rgba(208, 64, 40, 0.75)!important;
+}
+
+#acerca-de, #educacion, #experiencias, #proyectos, #hys {
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 
 /* ***** Bootstrap Styles **** */
 
-.navbar-brand-1, .navbar-brand-2, .navbar-brand-3  img {
+.navbar-brand img {
     width: auto;
-    height: 30px;
+    height: 50px;
 }
-.btn-outline-success {
-    --bs-btn-color: rgba(208, 64, 40, 1);
+
+#boton-inicio {
+    --bs-btn-color: var(--first-color);
+    --bs-btn-border-color: var(--first-color);
+    --bs-btn-hover-bg: rgba(89, 177, 119, 1);
+    --bs-btn-hover-border-color: rgba(208, 64, 40, 1);
+    font-weight: bold;
+}
+
+#boton-cerrar {
+    --bs-btn-color: var(--first-color);
     --bs-btn-border-color: rgba(208, 64, 40, 1);
     --bs-btn-hover-bg: rgba(89, 177, 119, 1);
     --bs-btn-hover-border-color: rgba(208, 64, 40, 1);
     font-weight: bold;
 }
 
-.bg-dark {
-    background-color: var(--first-alpha-color) !important;
+#barra-navegacion {
+    background-color: rgba(208, 64, 40, 0.75)!important;
 }
 
 #iconos svg{
     color: white;
 }
 
+#iconos a {
+    text-align: justify;
+    margin-right: 20px;
+}
+
 .bg-info {
     background-color: rgba(225, 200, 148, 0.75)!important;
+}
+
+.linea {
+    border-top: 1px solid var(--first-alpha-color);
+    height: 2px;
+    max-width: 200px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+  }
+
+.nombre-institucion {
+    font-family: 'Merriweather', serif;
+    font-weight: light;
 }
 
 

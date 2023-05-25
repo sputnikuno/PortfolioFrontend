@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { InterceptorService } from './service/interceptor-service';
 import { NewExperienciaComponent } from './componentes/experiencias/new-experiencia.component';
 import { EditExperiencaComponent } from './componentes/experiencias/edit-experienca/edit-experienca.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { EditExperiencaComponent } from './componentes/experiencias/edit-experie
     NgCircleProgressModule.forRoot({}),
     FormsModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [
     {
