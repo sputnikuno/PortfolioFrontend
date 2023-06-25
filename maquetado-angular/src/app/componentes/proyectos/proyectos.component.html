@@ -1,23 +1,48 @@
 <div class="container" id="proyectos">
-    <div class="row">
-      <div class="col-4">
-        <h1>Proyectos</h1>
-      </div>
-      <div class="col-8">
-        <button type="button" class="btn btn-outline-secondary te" *ngIf="isLogged">Modificar</button>
-      </div>
+  <div class="row">
+    <div class="col-4">
+      <h1>Proyectos</h1>
     </div>
-      
-      <ul>
-        <li class="row" *ngFor="let proyectos of proyectosList">
-          <div>
-            <h4>{{proyectos.name}}</h4>
-          </div>
-          <p class="fs-7">{{proyectos.text}}</p>
-          <div>
-            <img [src]="proyectos.image" class="img-thumbnail"/>
-          </div>
-      </li>
-      </ul>
-
+    <div class="col-8">
+      <button type="button" class="btn btn-outline-secondary te" *ngIf="isLogged">Modificar</button>
+    </div>
   </div>
+
+  <div>
+
+    <h4>Retratos digitales de mascotas y personas</h4>
+    <section class="container-slider">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="assets/amadeagata.jpg">
+          <img id="slide-2" src="assets/negro.jpg">
+          <img id="slide-3" src="assets/laika.jpg">
+          <img id="slide-4" src="assets/paraOri.jpg">
+          <img id="slide-5" src="assets/Toto.jpg">
+        </div>
+
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+          <a href="#slide-5"></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <h4>Edición de Video</h4>
+  </div>
+
+  <div>
+    <h4>Visuales</h4>
+  </div>
+
+  <div>
+    <h4>Motion Graphics</h4>
+  
+  </div>
+
+</div>
