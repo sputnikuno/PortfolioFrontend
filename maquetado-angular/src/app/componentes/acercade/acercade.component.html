@@ -1,28 +1,29 @@
-<div class="container pt-7" id="acerca-de">
-    <div class="row">
-      <div class="col-4 text-center"> 
-          <img [src]="persona.image" class="img-fluid" alt=""/>
-          <h2 class="pt-3">{{persona.nombre}}</h2>
+<div class="container pb-5 pt-3" id="acerca-de">
+  <div class="row avatar-column">
+    <div class="col-4 d-flex flex-column align-items-center ">
+      <div class="avatar-container">
+        <img [src]="persona.image" class="img-fluid" alt="" *ngIf="persona && persona.image" /> 
       </div>
-      <div class="col-8 mb-3">
-        <div class="row justify-content-between">
-          <div class="col-4">
-            <h1>Acerca de</h1>
-          </div>
-          <div class="col-4" onclick="cambiar_parrafo()">
-            <a>
-              <button type="button" class="btn btn-outline-secondary te" *ngIf="isLogged">Modificar</button>
-            </a>
-          </div>
+      <div *ngIf="persona && persona.text" c>
+        <h2 class="pt-3">{{persona.nombre}}</h2>
+      </div>
+    </div>
+    <div class="col-8 mb-3">
+      <div class="row justify-content-between">
+        <div class="col-6">
+          <h1>Acerca de</h1>
+        </div>
+        <div class="modificar-button">
+          <a>
+            <button type="button" class="btn btn-outline-secondary te" routerLink="editAcercaDe/1"
+              *ngIf="isLogged">Modificar</button>
+          </a>
+        </div>
       </div>
       <span class="col-6">
-        <p class="fs-7" id="text-acercaDe">
-            {{persona.text}} </p>
+        <p id="text-acercaDe" *ngIf="persona && persona.text">
+          {{persona.text}} </p>
       </span>
-      <div> 
-        <input id="edit-acercaDe" type="text" oninput="myFunction2(this.value)" style="display:none">
-      </div>
-      </div> 
     </div>
   </div>
-  
+</div>

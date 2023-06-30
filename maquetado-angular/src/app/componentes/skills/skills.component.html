@@ -3,154 +3,68 @@
     <div class="col-4">
       <h1>Hard & Soft Skills</h1>
     </div>
-    <div class="col-8">
+    <div class="col-8 modificar-button">
       <button type="button" class="btn btn-outline-secondary te" *ngIf="isLogged">Modificar</button>
     </div>
   </div>
 
-  <div class="row"> 
+  <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-      <circle-progress
-        [percent]="100"
-        [showUnits]="false"
-        [radius]="70"
-        [title]="'Premiere Pro'"
-        [titleColor]="'rgba(208, 64, 40, 0.75)'"
-        [titleFontWeight]="'200'"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="3"
-        [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
-        [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'"
-        [animation]="true"
-        [animationDuration]="500">
-        </circle-progress>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-        <circle-progress
-            [percent]="100"
-            [showUnits]="false"
-            [radius]="70"
-            [title]="'After Effects'"
-            [titleColor]="'rgba(208, 64, 40, 0.75)'"
-            [titleFontWeight]="'200'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="3"
-            [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
-            [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'"
-            [animation]="true"
-            [animationDuration]="500">
-        </circle-progress>
-      </div>
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'Premiere Pro'"
+        [titleColor]="'rgba(208, 64, 40, 0.75)'" [titleFontWeight]="'200'" [showSubtitle]="false"
+        [outerStrokeWidth]="12" [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
+        [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'After Effects'"
+        [titleColor]="'rgba(208, 64, 40, 0.75)'" [titleFontWeight]="'200'" [showSubtitle]="false"
+        [outerStrokeWidth]="12" [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
+        [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-        <circle-progress
-            [percent]="100"
-            [showUnits]="false"
-            [radius]="70"
-            [title]="'Photoshop'"
-            [titleColor]="'rgba(208, 64, 40, 0.75)'"
-            [titleFontWeight]="'200'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="3"
-            [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
-            [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'"
-            [animation]="true"
-            [animationDuration]="500">
-        </circle-progress>
-      </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'Photoshop'"
+        [titleColor]="'rgba(208, 64, 40, 0.75)'" [titleFontWeight]="'200'" [showSubtitle]="false"
+        [outerStrokeWidth]="12" [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
+        [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-        <circle-progress
-              [percent]="100"
-              [showUnits]="false"
-              [radius]="70"
-              [title]="'Inglés'"
-              [titleColor]="'rgba(208, 64, 40, 1)'"
-              [titleFontWeight]="'200'"
-              [showSubtitle]="false"
-              [outerStrokeWidth]="12"
-              [innerStrokeWidth]="3"
-              [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
-              [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'"
-              [animation]="true"
-              [animationDuration]="500">
-        </circle-progress>
-      </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'Inglés'"
+        [titleColor]="'rgba(208, 64, 40, 1)'" [titleFontWeight]="'200'" [showSubtitle]="false" [outerStrokeWidth]="12"
+        [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(208, 64, 40, 0.75)'"
+        [innerStrokeColor]="'rgba(225, 200, 148, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
   </div>
 
-  <div class="row pt-5"> 
+  <div class="row pt-5" id="soft-skills">
     <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-      <circle-progress
-        [percent]="100"
-        [showUnits]="false"
-        [radius]="70"
-        [title]="'Analítica'"
-        [titleColor]="'rgba(89, 177, 119, 1)'"
-        [titleFontWeight]="'200'"
-        [showSubtitle]="false"
-        [outerStrokeWidth]="12"
-        [innerStrokeWidth]="3"
-        [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
-        [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'"
-        [animation]="true"
-        [animationDuration]="500">
-        </circle-progress>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-        <circle-progress
-            [percent]="100"
-            [showUnits]="false"
-            [radius]="70"
-            [title]="'Creativa'"
-            [titleColor]="'rgba(89, 177, 119, 1)'"
-            [titleFontWeight]="'200'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="3"
-            [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
-            [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'"
-            [animation]="true"
-            [animationDuration]="500">
-        </circle-progress>
-      </div>
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'Analítica'"
+        [titleColor]="'rgba(89, 177, 119, 1)'" [titleFontWeight]="'200'" [showSubtitle]="false" [outerStrokeWidth]="12"
+        [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
+        [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'Creativa'"
+        [titleColor]="'rgba(89, 177, 119, 1)'" [titleFontWeight]="'200'" [showSubtitle]="false" [outerStrokeWidth]="12"
+        [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
+        [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-        <circle-progress
-            [percent]="100"
-            [showUnits]="false"
-            [radius]="70"
-            [title]="'Detallista'"
-            [titleColor]="'rgba(89, 177, 119, 1)'"
-            [titleFontWeight]="'200'"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="12"
-            [innerStrokeWidth]="3"
-            [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
-            [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'"
-            [animation]="true"
-            [animationDuration]="500">
-        </circle-progress>
-      </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+      <circle-progress [percent]="100" [showUnits]="false" [radius]="70" [title]="'Detallista'"
+        [titleColor]="'rgba(89, 177, 119, 1)'" [titleFontWeight]="'200'" [showSubtitle]="false" [outerStrokeWidth]="12"
+        [innerStrokeWidth]="3" [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
+        [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'" [animation]="true" [animationDuration]="500">
+      </circle-progress>
+    </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-        <circle-progress
-              [percent]="100"
-              [showUnits]="false"
-              [radius]="70"
-              [title]="'Colaborativa'"
-              [titleColor]="'rgba(89, 177, 119, 1)'"
-              [titleFontWeight]="'200'"
-              [showSubtitle]="false"
-              [outerStrokeWidth]="12"
-              [innerStrokeWidth]="3"
-              [outerStrokeColor]="'rgba(89, 177, 119, 1)'"
-              [innerStrokeColor]="' rgba(50, 90, 54, 0.75)'"
-              [animation]="true"
-              [animationDuration]="500">
-        </circle-progress>
-      </div>
+
   </div>
 </div>

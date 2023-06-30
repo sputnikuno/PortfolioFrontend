@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "frontend-porfolio-gl"
-  }
+    "default": "porfolio-georgina",
+    "Porfolio ArgPrograma": "porfolio-georgina"
+  },
+  "targets": {},
+  "etags": {}
 }

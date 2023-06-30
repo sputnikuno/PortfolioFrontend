@@ -19,6 +19,11 @@ import { InterceptorService } from './service/interceptor-service';
 import { NewExperienciaComponent } from './componentes/experiencias/new-experiencia.component';
 import { EditExperiencaComponent } from './componentes/experiencias/edit-experienca/edit-experienca.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SliderComponent } from './componentes/proyectos/slider/slider.component';
+import { EditAcercaDeComponent } from './componentes/acercade/edit-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     NewExperienciaComponent,
     EditExperiencaComponent,
+    SliderComponent,
+    EditAcercaDeComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +50,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpClientModule,
     NgbModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     {

@@ -4,26 +4,27 @@ import { Observable } from 'rxjs';
 import { persona } from '../model/persona.model';
 import { environment } from 'src/environments/environment';
 
-
 const TOKEN_KEY = 'AuthToken';
 const USERNAME_KEY = 'AuthUserName';
 const AUTHORITIES_KEY = 'AuthAuthotities';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class PersonaService {
+  private URL: string = environment.apiURL + 'personas/';
 
-  private url: string = environment.apiURL + 'personas/traer/perfil';
+  constructor(private httpCLient: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  public lista(): Observable<persona[]> {
+    return this.httpCLient.get<persona[]>(this.URL + 'lista');
+  }
 
-  getPersona(): Observable<persona> {
-    const headers = new HttpHeaders({
-      'Authorization': '',
-      'Content-Type': 'application/json'
-    });
-    return this.http.get<persona>(this.url, { headers });
+  public detail(id: number): Observable<persona> {
+    return this.httpCLient.get<persona>(this.URL + `detail/${id}`);
+  }
+
+  public update(id: number, Persona: persona): Observable<any> {
+    return this.httpCLient.put<any>(this.URL + `update/${id}`, Persona);
   }
 }

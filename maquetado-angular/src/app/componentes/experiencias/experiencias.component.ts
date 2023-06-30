@@ -6,13 +6,15 @@ import { Experiencia } from 'src/app/model/experiencia';
 @Component({
   selector: 'app-experiencias',
   templateUrl: './experiencias.component.html',
-  styleUrls: ['./experiencias.component.css']
+  styleUrls: ['./experiencias.component.css'],
 })
-
 export class ExperienciasComponent implements OnInit {
   expe: Experiencia[] = [];
 
-  constructor(private servExperiencia: ServExperienciaService, private tokenService: TokenService) { }
+  constructor(
+    private servExperiencia: ServExperienciaService,
+    private tokenService: TokenService
+  ) {}
 
   isLogged = false;
 
@@ -26,30 +28,27 @@ export class ExperienciasComponent implements OnInit {
     }
   }
 
-cargarExperiencia():void{
-  this.servExperiencia.lista().subscribe(data => {
-    this.expe = data;});
-}
+  cargarExperiencia(): void {
+    this.servExperiencia.lista().subscribe((data) => {
+      this.expe = data;
+    });
+  }
 
-eliminar(id?: number) {
-  if (id != undefined) {
-    // Mostrar mensaje de confirmación
-    if (confirm("¿Estás seguro de que deseas eliminar esta experiencia?")) {
-      this.servExperiencia.delete(id).subscribe(
-        data => {
-          this.cargarExperiencia();
-        },
-        err => {
-          alert("No se pudo borrar la experiencia");
-        }
-      );
+  eliminar(id?: number) {
+    if (id != undefined) {
+      if (confirm('¿Estás seguro de que deseas eliminar esta experiencia?')) {
+        this.servExperiencia.delete(id).subscribe(
+          (data) => {
+            this.cargarExperiencia();
+          },
+          (err) => {
+            alert('No se pudo borrar la experiencia');
+          }
+        );
+      }
     }
   }
 }
-
-
-}
-
 
 //export class ExperienciasComponent implements OnInit {
 //  experienciasList:any;
@@ -60,5 +59,3 @@ eliminar(id?: number) {
 //      this.experienciasList = data.expertise;
 //    })
 //  }
-
-

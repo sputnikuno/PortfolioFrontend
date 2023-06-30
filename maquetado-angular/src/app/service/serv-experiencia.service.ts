@@ -5,19 +5,19 @@ import { Experiencia } from '../model/experiencia';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ServExperienciaService {
-  expURL = environment.apiURL + 'explab/'
+  expURL = environment.apiURL + 'explab/';
 
-  constructor(private httpCLient: HttpClient) { }
+  constructor(private httpCLient: HttpClient) {}
 
   public lista(): Observable<Experiencia[]> {
     return this.httpCLient.get<Experiencia[]>(this.expURL + 'lista');
   }
 
   public detail(id: number): Observable<Experiencia> {
-    return this.httpCLient.get<Experiencia>(this.expURL + `detail/${id}`)
+    return this.httpCLient.get<Experiencia>(this.expURL + `detail/${id}`);
   }
   public save(experiencia: Experiencia): Observable<any> {
     return this.httpCLient.post<any>(this.expURL + `create`, experiencia);
@@ -30,5 +30,4 @@ export class ServExperienciaService {
   public delete(id: number): Observable<any> {
     return this.httpCLient.delete<any>(this.expURL + `delete/${id}`);
   }
-  
 }

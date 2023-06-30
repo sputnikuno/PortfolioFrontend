@@ -4,7 +4,7 @@ import { Experiencia } from 'src/app/model/experiencia';
 import { ServExperienciaService } from 'src/app/service/serv-experiencia.service';
 
 @Component({
-  selector: 'app-edit-experienca', // Corregir el selector aquí
+  selector: 'app-edit-experienca',
   templateUrl: './edit-experienca.component.html',
   styleUrls: ['./edit-experienca.component.css']
 })
@@ -25,7 +25,7 @@ export class EditExperiencaComponent implements OnInit {
       },
       (err) => {
         alert('Error al modificar experiencia');
-        this.router.navigate(['']);
+        this.router.navigate(['']); // Redirige a la página principal en caso de error
       }
     );
   }
@@ -34,12 +34,15 @@ export class EditExperiencaComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.servExperiencia.update(id, this.expLab).subscribe(
       (data) => {
-        this.router.navigate(['']);
+        this.router.navigate(['']); // Redirige a la página principal después de actualizar
       },
       (err) => {
-        alert('Error al modificar experiencia');
+        alert('Error al actualizar experiencia');
       }
     );
   }
-}
 
+  cancelar(): void {
+    this.router.navigate(['']); // Redirige a la página principal al cancelar
+  }
+}

@@ -29,9 +29,18 @@ export class NewExperienciaComponent {
         alert("Experiencia añadida");
         this.router.navigate(['']);
   }, err => {
-    alert("Falló");
+    alert("Has cancelado los cambios");
     this.router.navigate(['']);
   }
   )
+  }
+
+  cancelar() {
+    this.nombreE = '';
+    this.nombreEmpresa = '';
+    this.esTrabajoActual = '';
+    this.fechaInicio = '';
+    this.fechaFin = '';
+    this.descripcionE = '';
   }
 }

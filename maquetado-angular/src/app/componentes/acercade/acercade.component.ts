@@ -5,23 +5,27 @@ import { TokenService } from 'src/app/service/token.service';
 @Component({
   selector: 'app-acercade',
   templateUrl: './acercade.component.html',
-  styleUrls: ['./acercade.component.css']
+  styleUrls: ['./acercade.component.css'],
 })
 export class AcercadeComponent implements OnInit {
-  persona: persona = new persona("", "", "");
+  persona: persona = null;
   isLogged = false;
 
-  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
-  
+  constructor(
+    public personaService: PersonaService,
+    private tokenService: TokenService
+  ) {}
+
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {
-      this.persona = data});
- 
-      if (this.tokenService.getToken()) {
-        this.isLogged = true;
-      } else {
-        this.isLogged = false;
-      }
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+    this.cargarPersona();
   }
 
+  cargarPersona() {
+    this.personaService.detail(1).subscribe((data) => (this.persona = data));
+  }
 }
