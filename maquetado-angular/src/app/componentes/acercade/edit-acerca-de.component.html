@@ -4,7 +4,8 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="text">Descripcion</label>
@@ -12,16 +13,18 @@
                 </div>
                 <div class="form-group">
                     <label for="img">Avatar</label>
-                    <input type="file" class="form-control" id="image" name="image" [(ngModel)]="persona.image" (change)="uploadImage($event)"
-                    accept=".jpg, .jpeg,.png">
+                    <input type="file" class="form-control" id="image" name="image" [(ngModel)]="persona.image"
+                        (change)="uploadImage($event)" accept=".jpg, .jpeg,.png">
                 </div>
                 <br>
-                <button class="btn btn-outline-secondary te" id="button-acercaDe">
-                    Guardar cambios
-                </button>
-                <button class="btn btn-outline-secondary te" (click)="cancelar()" id="button-cancel3">
-                    Cancelar
-                </button>
+                <div class="form-buttons">
+                    <button class="btn btn-outline-secondary te" id="button-acercaDe">
+                        Guardar cambios
+                    </button>
+                    <button class="btn btn-outline-secondary te" (click)="cancelar()" id="button-cancel3">
+                        Cancelar
+                    </button>
+                </div>
             </form>
         </div>
     </div>

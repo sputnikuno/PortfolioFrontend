@@ -7,15 +7,18 @@
             </div>
             <div class="form-group">
                 <label for="nombreEmpresa">Nombre de la Empresa</label>
-                <input type="text" name="nombreEmpresa" class="form-control" id="nombreEmpresa" [(ngModel)]="nombreEmpresa" required>
+                <input type="text" name="nombreEmpresa" class="form-control" id="nombreEmpresa"
+                    [(ngModel)]="nombreEmpresa" required>
             </div>
             <div class="form-group">
                 <label for="esTrabajoActual">Es trabajo actual?</label>
-                <input type="text" name="esTrabajoActual" class="form-control" id="esTrabajoActual" [(ngModel)]="esTrabajoActual">
+                <input type="text" name="esTrabajoActual" class="form-control" id="esTrabajoActual"
+                    [(ngModel)]="esTrabajoActual">
             </div>
             <div class="form-group">
                 <label for="fechaInicio">Fecha de Inicio</label>
-                <input type="text" name="fechaInicio" class="form-control" id="fechaInicio" [(ngModel)]="fechaInicio" required>
+                <input type="text" name="fechaInicio" class="form-control" id="fechaInicio" [(ngModel)]="fechaInicio"
+                    required>
             </div>
             <div class="form-group">
                 <label for="fechaFin">Fecha Fin</label>
@@ -23,15 +26,18 @@
             </div>
             <div class="form-group">
                 <label for="descripcionE">Descripción</label>
-                <input type="text" name="descripcionE" class="form-control" id="descripcionE" [(ngModel)]="descripcionE" required>
+                <input type="text" name="descripcionE" class="form-control" id="descripcionE" [(ngModel)]="descripcionE"
+                    required>
             </div>
             <br>
-            <button type="submit" class="btn btn-outline-secondary te" id="button-agregar">
-                Agregar experiencia
-            </button>
-            <button type="submit" class="btn btn-outline-secondary te"  id="button-cancel" (click)="cancelar()">
-                Cancelar
-            </button>
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-outline-secondary te" id="button-agregar">
+                    Agregar experiencia
+                </button>
+                <button type="submit" class="btn btn-outline-secondary te" id="button-cancel" (click)="cancelar()">
+                    Cancelar
+                </button>
+            </div>
         </form>
     </div>
 </div>

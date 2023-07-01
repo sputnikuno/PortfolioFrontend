@@ -1,8 +1,10 @@
 <div class="container" id="experiencias">
   <div class="row justify-content-between mb-4">
+
     <div class="col-4">
       <h1>Experiencias</h1>
     </div>
+
     <div class="col-8 modificar-button">
       <button type="button" class="btn btn-outline-secondary" routerLink="/nuevaexp" *ngIf="isLogged">
         Agregar
@@ -35,7 +37,7 @@
       <p class="nombre-institucion">{{Experiencia.nombreEmpresa}}</p>
     </div>
     <div class="col-8 fs-7">
-      <p>{{Experiencia.descripcionE}}</p>
+      <p class="nombre-institucion">{{Experiencia.descripcionE}}</p>
       <p><time>{{Experiencia.fechaInicio}}</time> -
         <time>{{Experiencia.fechaFin}}</time><time>{{Experiencia.esTrabajoActual}}</time>
       </p>

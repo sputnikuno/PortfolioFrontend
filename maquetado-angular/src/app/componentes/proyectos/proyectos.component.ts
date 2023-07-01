@@ -5,15 +5,18 @@ import { TokenService } from 'src/app/service/token.service';
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.css']
+  styleUrls: ['./proyectos.component.css'],
 })
 export class ProyectosComponent implements OnInit {
-  proyectosList:any;
-  constructor(private datosPortfolio:PortfolioService, private tokenService: TokenService) { }
+  proyectosList: any;
+  constructor(
+    private datosPortfolio: PortfolioService,
+    private tokenService: TokenService
+  ) {}
   isLogged = false;
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=> {
+    this.datosPortfolio.obtenerDatos().subscribe((data) => {
       this.proyectosList = data.projects;
 
       if (this.tokenService.getToken()) {
@@ -21,6 +24,6 @@ export class ProyectosComponent implements OnInit {
       } else {
         this.isLogged = false;
       }
-    })
+    });
   }
 }

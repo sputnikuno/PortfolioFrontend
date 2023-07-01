@@ -1,6 +1,6 @@
 <div *ngIf="expLab">
     <div class="container-form">
-        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" >
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
                 <label for="nombreE">Nombre de la Experiencia</label>
                 <input type="text" name="nombreE" class="form-control" id="nombreE" [(ngModel)]="expLab.nombreE"
@@ -31,12 +31,14 @@
                     [(ngModel)]="expLab.descripcionE" required>
             </div>
             <br>
-            <button type="submit" class="btn btn-outline-secondary te" id="button-editar">
-                Actualizar experiencia
-            </button>
-            <button type="submit" class="btn btn-outline-secondary te"  id="button-cancel2" (click)="cancelar()">
-                Cancelar
-            </button>
+            <div class="form-buttons">
+                <button type="submit" class="btn btn-outline-secondary te" id="button-editar">
+                    Actualizar experiencia
+                </button>
+                <button type="submit" class="btn btn-outline-secondary te" id="button-cancel2" (click)="cancelar()">
+                    Cancelar
+                </button>
+            </div>
         </form>
     </div>
 </div>
