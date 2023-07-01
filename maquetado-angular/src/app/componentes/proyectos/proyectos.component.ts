@@ -26,4 +26,9 @@ export class ProyectosComponent implements OnInit {
       }
     });
   }
+
+  openVideoWindow(videoUrl: string): void {
+    window.open(videoUrl, '_blank');
+  }
 }
+

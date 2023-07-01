@@ -47,11 +47,11 @@ time {
 }
 
 footer {
-    background: linear-gradient( var(--first-alpha-color));
+    background: var(--first-alpha-color);
     display: flex;
     text-align: center;
     align-items: flex-end;
-    height: 8rem;
+    height: 4rem;
 }
 
 #acerca-de,
@@ -239,20 +239,19 @@ footer {
     align-self: center;
 }
 
-.links-videos {
+
+.proyectos-container {
+    padding-bottom: 8rem;
+}
+.enlaces-porfolio{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.30);
     color: white;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px rgb(17, 17, 17);
+    
 }
-
-.links-videos:hover {
-    color: var(--first-color);
+.enlaces-porfolio:hover {
+    color: var(--first-alpha-color);
 }
-
-.proyectos {
-    padding: 10px;
-}
-
 
 /* **** Formularios **** */
 
